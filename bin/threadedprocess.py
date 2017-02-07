@@ -2,6 +2,10 @@
 
 import thread
 import time
+import os
+
+print("starting threadedprocess[" + str(os.getpid()) + "]")
+
 
 # Define a function for the thread
 def print_time( threadName, delay, maxi):
@@ -10,6 +14,8 @@ def print_time( threadName, delay, maxi):
         time.sleep(delay)
         count += 1
         print "%s: %s" % ( threadName, time.ctime(time.time()) )
+
+
 
 # Create two threads as follows
 try:
