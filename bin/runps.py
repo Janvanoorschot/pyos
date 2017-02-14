@@ -1,7 +1,8 @@
 #!/usr/bin/python
 import subprocess
 
-output = subprocess.check_output(["ps", "-e", "-T"])
+output = subprocess.check_output(["ps", "ax", "-o", "pid="])
 
 for line in output.split('\n'):
-    print("line: " + line)
+    pid = int(line)
+    print("pid: " + pid)
