@@ -21,5 +21,5 @@ for pid in pids:
             spids.append(spid)
         except:
             pass
-    if spids.len() > 1:
+    if len(spids) > 1:
         print(str(pid))
