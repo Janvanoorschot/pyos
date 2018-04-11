@@ -14,5 +14,6 @@ instance/
 *~
 *.bak
 *.log
+massif.out.*
 
 src/eatmem
