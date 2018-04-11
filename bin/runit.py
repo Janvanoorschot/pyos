@@ -27,7 +27,6 @@ def start_thread(tname):
     return thrd
 
 def waste_time_and_space(thrd, count, size):
-    # print("start %s:%d:%d" % (thrd['name'],count,size))
     with tempfile.NamedTemporaryFile() as fn:
         ix = 0
         blocks = []
@@ -35,7 +34,6 @@ def waste_time_and_space(thrd, count, size):
             blocks.append(' ' * size * 1024)
             time.sleep(4)
             ix+=1
-    # print("end %s:%d:%d" % (thrd['name'],count,size))
 
 # start yourself
 print("strt %s[%d]:%d:%d:%d" % (args.name, os.getpid(), args.children, args.threads, args.memory))
